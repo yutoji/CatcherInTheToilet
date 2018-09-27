@@ -23,8 +23,11 @@ class GameScene: SKScene {
         catcherPositioner.onFrameUpdated()
         catcher.updatePosition()
     }
+}
 
-    //MARK: - Touch event handling
+//MARK: - Touch event handling
+
+extension GameScene {
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         _handleTouchForCatcher(touch: touches.first!)
