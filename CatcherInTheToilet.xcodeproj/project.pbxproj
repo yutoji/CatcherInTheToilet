@@ -17,6 +17,7 @@
 		514C967B215C835D00A79639 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 514C9679215C835D00A79639 /* LaunchScreen.storyboard */; };
 		514C9686215C835D00A79639 /* CatcherInTheToiletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514C9685215C835D00A79639 /* CatcherInTheToiletTests.swift */; };
 		514C9691215C835D00A79639 /* CatcherInTheToiletUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514C9690215C835D00A79639 /* CatcherInTheToiletUITests.swift */; };
+		514C969F215C85D700A79639 /* SampleGridTileSet.sks in Resources */ = {isa = PBXBuildFile; fileRef = 514C969E215C85D700A79639 /* SampleGridTileSet.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		514C968C215C835D00A79639 /* CatcherInTheToiletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatcherInTheToiletUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		514C9690215C835D00A79639 /* CatcherInTheToiletUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatcherInTheToiletUITests.swift; sourceTree = "<group>"; };
 		514C9692215C835D00A79639 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		514C969E215C85D700A79639 /* SampleGridTileSet.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SampleGridTileSet.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				514C9677215C835D00A79639 /* Assets.xcassets */,
 				514C9679215C835D00A79639 /* LaunchScreen.storyboard */,
 				514C967C215C835D00A79639 /* Info.plist */,
+				514C969E215C85D700A79639 /* SampleGridTileSet.sks */,
 			);
 			path = CatcherInTheToilet;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				514C969F215C85D700A79639 /* SampleGridTileSet.sks in Resources */,
 				514C9676215C835C00A79639 /* Main.storyboard in Resources */,
 				514C966D215C835C00A79639 /* GameScene.sks in Resources */,
 				514C9678215C835D00A79639 /* Assets.xcassets in Resources */,
