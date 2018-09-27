@@ -1,0 +1,597 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		514C966B215C835C00A79639 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514C966A215C835C00A79639 /* AppDelegate.swift */; };
+		514C966D215C835C00A79639 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 514C966C215C835C00A79639 /* GameScene.sks */; };
+		514C966F215C835C00A79639 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 514C966E215C835C00A79639 /* Actions.sks */; };
+		514C9671215C835C00A79639 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514C9670215C835C00A79639 /* GameScene.swift */; };
+		514C9673215C835C00A79639 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514C9672215C835C00A79639 /* GameViewController.swift */; };
+		514C9676215C835C00A79639 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 514C9674215C835C00A79639 /* Main.storyboard */; };
+		514C9678215C835D00A79639 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 514C9677215C835D00A79639 /* Assets.xcassets */; };
+		514C967B215C835D00A79639 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 514C9679215C835D00A79639 /* LaunchScreen.storyboard */; };
+		514C9686215C835D00A79639 /* CatcherInTheToiletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514C9685215C835D00A79639 /* CatcherInTheToiletTests.swift */; };
+		514C9691215C835D00A79639 /* CatcherInTheToiletUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514C9690215C835D00A79639 /* CatcherInTheToiletUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		514C9682215C835D00A79639 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 514C965F215C835C00A79639 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 514C9666215C835C00A79639;
+			remoteInfo = CatcherInTheToilet;
+		};
+		514C968D215C835D00A79639 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 514C965F215C835C00A79639 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 514C9666215C835C00A79639;
+			remoteInfo = CatcherInTheToilet;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		514C9667215C835C00A79639 /* CatcherInTheToilet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatcherInTheToilet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		514C966A215C835C00A79639 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		514C966C215C835C00A79639 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		514C966E215C835C00A79639 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		514C9670215C835C00A79639 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		514C9672215C835C00A79639 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		514C9675215C835C00A79639 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		514C9677215C835D00A79639 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		514C967A215C835D00A79639 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		514C967C215C835D00A79639 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		514C9681215C835D00A79639 /* CatcherInTheToiletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatcherInTheToiletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		514C9685215C835D00A79639 /* CatcherInTheToiletTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatcherInTheToiletTests.swift; sourceTree = "<group>"; };
+		514C9687215C835D00A79639 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		514C968C215C835D00A79639 /* CatcherInTheToiletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatcherInTheToiletUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		514C9690215C835D00A79639 /* CatcherInTheToiletUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatcherInTheToiletUITests.swift; sourceTree = "<group>"; };
+		514C9692215C835D00A79639 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		514C9664215C835C00A79639 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		514C967E215C835D00A79639 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		514C9689215C835D00A79639 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		514C965E215C835C00A79639 = {
+			isa = PBXGroup;
+			children = (
+				514C9669215C835C00A79639 /* CatcherInTheToilet */,
+				514C9684215C835D00A79639 /* CatcherInTheToiletTests */,
+				514C968F215C835D00A79639 /* CatcherInTheToiletUITests */,
+				514C9668215C835C00A79639 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		514C9668215C835C00A79639 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				514C9667215C835C00A79639 /* CatcherInTheToilet.app */,
+				514C9681215C835D00A79639 /* CatcherInTheToiletTests.xctest */,
+				514C968C215C835D00A79639 /* CatcherInTheToiletUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		514C9669215C835C00A79639 /* CatcherInTheToilet */ = {
+			isa = PBXGroup;
+			children = (
+				514C966A215C835C00A79639 /* AppDelegate.swift */,
+				514C966C215C835C00A79639 /* GameScene.sks */,
+				514C966E215C835C00A79639 /* Actions.sks */,
+				514C9670215C835C00A79639 /* GameScene.swift */,
+				514C9672215C835C00A79639 /* GameViewController.swift */,
+				514C9674215C835C00A79639 /* Main.storyboard */,
+				514C9677215C835D00A79639 /* Assets.xcassets */,
+				514C9679215C835D00A79639 /* LaunchScreen.storyboard */,
+				514C967C215C835D00A79639 /* Info.plist */,
+			);
+			path = CatcherInTheToilet;
+			sourceTree = "<group>";
+		};
+		514C9684215C835D00A79639 /* CatcherInTheToiletTests */ = {
+			isa = PBXGroup;
+			children = (
+				514C9685215C835D00A79639 /* CatcherInTheToiletTests.swift */,
+				514C9687215C835D00A79639 /* Info.plist */,
+			);
+			path = CatcherInTheToiletTests;
+			sourceTree = "<group>";
+		};
+		514C968F215C835D00A79639 /* CatcherInTheToiletUITests */ = {
+			isa = PBXGroup;
+			children = (
+				514C9690215C835D00A79639 /* CatcherInTheToiletUITests.swift */,
+				514C9692215C835D00A79639 /* Info.plist */,
+			);
+			path = CatcherInTheToiletUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		514C9666215C835C00A79639 /* CatcherInTheToilet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 514C9695215C835D00A79639 /* Build configuration list for PBXNativeTarget "CatcherInTheToilet" */;
+			buildPhases = (
+				514C9663215C835C00A79639 /* Sources */,
+				514C9664215C835C00A79639 /* Frameworks */,
+				514C9665215C835C00A79639 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CatcherInTheToilet;
+			productName = CatcherInTheToilet;
+			productReference = 514C9667215C835C00A79639 /* CatcherInTheToilet.app */;
+			productType = "com.apple.product-type.application";
+		};
+		514C9680215C835D00A79639 /* CatcherInTheToiletTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 514C9698215C835D00A79639 /* Build configuration list for PBXNativeTarget "CatcherInTheToiletTests" */;
+			buildPhases = (
+				514C967D215C835D00A79639 /* Sources */,
+				514C967E215C835D00A79639 /* Frameworks */,
+				514C967F215C835D00A79639 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				514C9683215C835D00A79639 /* PBXTargetDependency */,
+			);
+			name = CatcherInTheToiletTests;
+			productName = CatcherInTheToiletTests;
+			productReference = 514C9681215C835D00A79639 /* CatcherInTheToiletTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		514C968B215C835D00A79639 /* CatcherInTheToiletUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 514C969B215C835D00A79639 /* Build configuration list for PBXNativeTarget "CatcherInTheToiletUITests" */;
+			buildPhases = (
+				514C9688215C835D00A79639 /* Sources */,
+				514C9689215C835D00A79639 /* Frameworks */,
+				514C968A215C835D00A79639 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				514C968E215C835D00A79639 /* PBXTargetDependency */,
+			);
+			name = CatcherInTheToiletUITests;
+			productName = CatcherInTheToiletUITests;
+			productReference = 514C968C215C835D00A79639 /* CatcherInTheToiletUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		514C965F215C835C00A79639 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = yutoji;
+				TargetAttributes = {
+					514C9666215C835C00A79639 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					514C9680215C835D00A79639 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 514C9666215C835C00A79639;
+					};
+					514C968B215C835D00A79639 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 514C9666215C835C00A79639;
+					};
+				};
+			};
+			buildConfigurationList = 514C9662215C835C00A79639 /* Build configuration list for PBXProject "CatcherInTheToilet" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 514C965E215C835C00A79639;
+			productRefGroup = 514C9668215C835C00A79639 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				514C9666215C835C00A79639 /* CatcherInTheToilet */,
+				514C9680215C835D00A79639 /* CatcherInTheToiletTests */,
+				514C968B215C835D00A79639 /* CatcherInTheToiletUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		514C9665215C835C00A79639 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				514C9676215C835C00A79639 /* Main.storyboard in Resources */,
+				514C966D215C835C00A79639 /* GameScene.sks in Resources */,
+				514C9678215C835D00A79639 /* Assets.xcassets in Resources */,
+				514C967B215C835D00A79639 /* LaunchScreen.storyboard in Resources */,
+				514C966F215C835C00A79639 /* Actions.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		514C967F215C835D00A79639 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		514C968A215C835D00A79639 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		514C9663215C835C00A79639 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				514C9671215C835C00A79639 /* GameScene.swift in Sources */,
+				514C9673215C835C00A79639 /* GameViewController.swift in Sources */,
+				514C966B215C835C00A79639 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		514C967D215C835D00A79639 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				514C9686215C835D00A79639 /* CatcherInTheToiletTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		514C9688215C835D00A79639 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				514C9691215C835D00A79639 /* CatcherInTheToiletUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		514C9683215C835D00A79639 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 514C9666215C835C00A79639 /* CatcherInTheToilet */;
+			targetProxy = 514C9682215C835D00A79639 /* PBXContainerItemProxy */;
+		};
+		514C968E215C835D00A79639 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 514C9666215C835C00A79639 /* CatcherInTheToilet */;
+			targetProxy = 514C968D215C835D00A79639 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		514C9674215C835C00A79639 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				514C9675215C835C00A79639 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		514C9679215C835D00A79639 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				514C967A215C835D00A79639 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		514C9693215C835D00A79639 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		514C9694215C835D00A79639 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		514C9696215C835D00A79639 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CatcherInTheToilet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jp.hateblo.yutoji.CatcherInTheToilet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		514C9697215C835D00A79639 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CatcherInTheToilet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jp.hateblo.yutoji.CatcherInTheToilet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		514C9699215C835D00A79639 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CatcherInTheToiletTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jp.hateblo.yutoji.CatcherInTheToiletTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CatcherInTheToilet.app/CatcherInTheToilet";
+			};
+			name = Debug;
+		};
+		514C969A215C835D00A79639 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CatcherInTheToiletTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jp.hateblo.yutoji.CatcherInTheToiletTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CatcherInTheToilet.app/CatcherInTheToilet";
+			};
+			name = Release;
+		};
+		514C969C215C835D00A79639 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CatcherInTheToiletUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jp.hateblo.yutoji.CatcherInTheToiletUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CatcherInTheToilet;
+			};
+			name = Debug;
+		};
+		514C969D215C835D00A79639 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CatcherInTheToiletUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jp.hateblo.yutoji.CatcherInTheToiletUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CatcherInTheToilet;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		514C9662215C835C00A79639 /* Build configuration list for PBXProject "CatcherInTheToilet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				514C9693215C835D00A79639 /* Debug */,
+				514C9694215C835D00A79639 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		514C9695215C835D00A79639 /* Build configuration list for PBXNativeTarget "CatcherInTheToilet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				514C9696215C835D00A79639 /* Debug */,
+				514C9697215C835D00A79639 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		514C9698215C835D00A79639 /* Build configuration list for PBXNativeTarget "CatcherInTheToiletTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				514C9699215C835D00A79639 /* Debug */,
+				514C969A215C835D00A79639 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		514C969B215C835D00A79639 /* Build configuration list for PBXNativeTarget "CatcherInTheToiletUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				514C969C215C835D00A79639 /* Debug */,
+				514C969D215C835D00A79639 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 514C965F215C835C00A79639 /* Project object */;
+}
