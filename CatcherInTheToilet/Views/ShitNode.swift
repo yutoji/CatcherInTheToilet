@@ -4,9 +4,11 @@ class ShitNode: SKSpriteNode {
 
     private let DEFAULT_WIDTH: CGFloat = 60.0
     let type: ShitType
+    var state: ShitState
 
     init(type: ShitType) {
         self.type = type
+        self.state = .standby
         let texture = SKTexture(imageNamed: type.filename)
         let size = CGSize(
             width: DEFAULT_WIDTH,

@@ -24,6 +24,7 @@
 		51D1A2A4215D06380091AEF3 /* TouchPointCatcherPositioner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D1A2A3215D06380091AEF3 /* TouchPointCatcherPositioner.swift */; };
 		51D1A2A7215D27860091AEF3 /* ShitType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D1A2A6215D27860091AEF3 /* ShitType.swift */; };
 		51D1A2A9215D28AC0091AEF3 /* ShitNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D1A2A8215D28AC0091AEF3 /* ShitNode.swift */; };
+		51D1A2AB215D345D0091AEF3 /* ShitState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D1A2AA215D345D0091AEF3 /* ShitState.swift */; };
 		51E047FD215C8D6400BB0F65 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E047FC215C8D6400BB0F65 /* GameModel.swift */; };
 		51E047FF215C8DCC00BB0F65 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E047FE215C8DCC00BB0F65 /* GameState.swift */; };
 		51E04802215C8F7000BB0F65 /* CatcherNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E04801215C8F7000BB0F65 /* CatcherNode.swift */; };
@@ -70,6 +71,7 @@
 		51D1A2A3215D06380091AEF3 /* TouchPointCatcherPositioner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchPointCatcherPositioner.swift; sourceTree = "<group>"; };
 		51D1A2A6215D27860091AEF3 /* ShitType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShitType.swift; sourceTree = "<group>"; };
 		51D1A2A8215D28AC0091AEF3 /* ShitNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShitNode.swift; sourceTree = "<group>"; };
+		51D1A2AA215D345D0091AEF3 /* ShitState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShitState.swift; sourceTree = "<group>"; };
 		51E047FC215C8D6400BB0F65 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		51E047FE215C8DCC00BB0F65 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 		51E04801215C8F7000BB0F65 /* CatcherNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatcherNode.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				51E047FE215C8DCC00BB0F65 /* GameState.swift */,
 				51D1A2A5215D067B0091AEF3 /* Positioner */,
 				51D1A2A6215D27860091AEF3 /* ShitType.swift */,
+				51D1A2AA215D345D0091AEF3 /* ShitState.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 				51D1A2A9215D28AC0091AEF3 /* ShitNode.swift in Sources */,
 				51D1A29E215CBE790091AEF3 /* CatcherPositioner.swift in Sources */,
 				51D1A2A7215D27860091AEF3 /* ShitType.swift in Sources */,
+				51D1A2AB215D345D0091AEF3 /* ShitState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
