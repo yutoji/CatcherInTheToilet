@@ -22,6 +22,8 @@
 		51D1A2A0215CC99C0091AEF3 /* PositionGettable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D1A29F215CC99C0091AEF3 /* PositionGettable.swift */; };
 		51D1A2A2215CC9F80091AEF3 /* TouchPointCatcherPositionerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D1A2A1215CC9F80091AEF3 /* TouchPointCatcherPositionerTests.swift */; };
 		51D1A2A4215D06380091AEF3 /* TouchPointCatcherPositioner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D1A2A3215D06380091AEF3 /* TouchPointCatcherPositioner.swift */; };
+		51D1A2A7215D27860091AEF3 /* ShitType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D1A2A6215D27860091AEF3 /* ShitType.swift */; };
+		51D1A2A9215D28AC0091AEF3 /* ShitNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D1A2A8215D28AC0091AEF3 /* ShitNode.swift */; };
 		51E047FD215C8D6400BB0F65 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E047FC215C8D6400BB0F65 /* GameModel.swift */; };
 		51E047FF215C8DCC00BB0F65 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E047FE215C8DCC00BB0F65 /* GameState.swift */; };
 		51E04802215C8F7000BB0F65 /* CatcherNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E04801215C8F7000BB0F65 /* CatcherNode.swift */; };
@@ -66,6 +68,8 @@
 		51D1A29F215CC99C0091AEF3 /* PositionGettable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionGettable.swift; sourceTree = "<group>"; };
 		51D1A2A1215CC9F80091AEF3 /* TouchPointCatcherPositionerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchPointCatcherPositionerTests.swift; sourceTree = "<group>"; };
 		51D1A2A3215D06380091AEF3 /* TouchPointCatcherPositioner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchPointCatcherPositioner.swift; sourceTree = "<group>"; };
+		51D1A2A6215D27860091AEF3 /* ShitType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShitType.swift; sourceTree = "<group>"; };
+		51D1A2A8215D28AC0091AEF3 /* ShitNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShitNode.swift; sourceTree = "<group>"; };
 		51E047FC215C8D6400BB0F65 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		51E047FE215C8DCC00BB0F65 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 		51E04801215C8F7000BB0F65 /* CatcherNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatcherNode.swift; sourceTree = "<group>"; };
@@ -122,10 +126,10 @@
 				514C966A215C835C00A79639 /* AppDelegate.swift */,
 				514C9672215C835C00A79639 /* ViewController.swift */,
 				514C9674215C835C00A79639 /* Main.storyboard */,
-				51D1A29A215C95890091AEF3 /* Util */,
+				51E047FA215C8CDD00BB0F65 /* Game */,
 				51E047FB215C8D2400BB0F65 /* Models */,
 				51E04800215C8E4B00BB0F65 /* Views */,
-				51E047FA215C8CDD00BB0F65 /* Game */,
+				51D1A29A215C95890091AEF3 /* Util */,
 				514C9677215C835D00A79639 /* Assets.xcassets */,
 				514C966E215C835C00A79639 /* Actions.sks */,
 				514C9679215C835D00A79639 /* LaunchScreen.storyboard */,
@@ -174,8 +178,8 @@
 		51E047FA215C8CDD00BB0F65 /* Game */ = {
 			isa = PBXGroup;
 			children = (
-				514C966C215C835C00A79639 /* GameScene.sks */,
 				514C9670215C835C00A79639 /* GameScene.swift */,
+				514C966C215C835C00A79639 /* GameScene.sks */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -186,6 +190,7 @@
 				51E047FC215C8D6400BB0F65 /* GameModel.swift */,
 				51E047FE215C8DCC00BB0F65 /* GameState.swift */,
 				51D1A2A5215D067B0091AEF3 /* Positioner */,
+				51D1A2A6215D27860091AEF3 /* ShitType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -194,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				51E04801215C8F7000BB0F65 /* CatcherNode.swift */,
+				51D1A2A8215D28AC0091AEF3 /* ShitNode.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -340,7 +346,9 @@
 				514C9673215C835C00A79639 /* ViewController.swift in Sources */,
 				514C966B215C835C00A79639 /* AppDelegate.swift in Sources */,
 				51D1A2A0215CC99C0091AEF3 /* PositionGettable.swift in Sources */,
+				51D1A2A9215D28AC0091AEF3 /* ShitNode.swift in Sources */,
 				51D1A29E215CBE790091AEF3 /* CatcherPositioner.swift in Sources */,
+				51D1A2A7215D27860091AEF3 /* ShitType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
