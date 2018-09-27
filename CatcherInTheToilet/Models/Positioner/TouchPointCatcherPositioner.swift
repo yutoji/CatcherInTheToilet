@@ -1,11 +1,7 @@
 import UIKit
 import SpriteKit
 
-protocol CatcherPositionerProtocol {
-    var nextPosition: CGPoint { get }
-}
-
-class CatcherPositioner: CatcherPositionerProtocol {
+class TouchPointCatcherPositioner: CatcherPositioner {
 
     var nextPosition: CGPoint = .zero
     private weak var catcher: PositionGettable!

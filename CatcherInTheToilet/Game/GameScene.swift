@@ -3,7 +3,7 @@ import UIKit
 
 class GameScene: SKScene {
     private var catcher: CatcherNode!
-    private var catcherPositioner: CatcherPositioner!
+    private var catcherPositioner: TouchPointCatcherPositioner!
 
     override func didMove(to view: SKView) {
         _setup()
@@ -12,7 +12,7 @@ class GameScene: SKScene {
     func _setup() {
         // Initialize
         catcher = (childNode(withName: "catcher") as! CatcherNode)
-        catcherPositioner = CatcherPositioner()
+        catcherPositioner = TouchPointCatcherPositioner()
 
         // Connects them
         catcher.setup(positioner: catcherPositioner)

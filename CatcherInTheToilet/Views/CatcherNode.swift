@@ -2,9 +2,9 @@ import SpriteKit
 
 class CatcherNode: SKSpriteNode, PositionGettable {
 
-    private var positioner: CatcherPositionerProtocol!
+    private var positioner: CatcherPositioner!
 
-    func setup(positioner: CatcherPositionerProtocol) {
+    func setup(positioner: CatcherPositioner) {
         self.positioner = positioner
     }
 

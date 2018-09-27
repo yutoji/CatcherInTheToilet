@@ -1,12 +1,12 @@
 import XCTest
 @testable import CatcherInTheToilet
 
-class CatcherPositionerTests: XCTestCase {
+class TouchPointCatcherPositionerTests: XCTestCase {
 
     private let DEFAULT_POSITION = CGPoint(x: 3, y: 111)
     private let SAMPLE_POSITION = CGPoint(x: 8, y: 9)
     fileprivate var catcher: _Catcher!
-    private var positioner: CatcherPositioner!
+    private var positioner: TouchPointCatcherPositioner!
 
     override func setUp() {
         reset()
@@ -15,7 +15,7 @@ class CatcherPositionerTests: XCTestCase {
     private func reset() {
         catcher = _Catcher()
         catcher.position = DEFAULT_POSITION
-        positioner = CatcherPositioner()
+        positioner = TouchPointCatcherPositioner()
         positioner.setup(catcher: catcher)
     }
 

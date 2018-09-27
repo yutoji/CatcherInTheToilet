@@ -20,7 +20,8 @@
 		514C969F215C85D700A79639 /* SampleGridTileSet.sks in Resources */ = {isa = PBXBuildFile; fileRef = 514C969E215C85D700A79639 /* SampleGridTileSet.sks */; };
 		51D1A29E215CBE790091AEF3 /* CatcherPositioner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D1A29D215CBE790091AEF3 /* CatcherPositioner.swift */; };
 		51D1A2A0215CC99C0091AEF3 /* PositionGettable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D1A29F215CC99C0091AEF3 /* PositionGettable.swift */; };
-		51D1A2A2215CC9F80091AEF3 /* CatcherPositionerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D1A2A1215CC9F80091AEF3 /* CatcherPositionerTests.swift */; };
+		51D1A2A2215CC9F80091AEF3 /* TouchPointCatcherPositionerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D1A2A1215CC9F80091AEF3 /* TouchPointCatcherPositionerTests.swift */; };
+		51D1A2A4215D06380091AEF3 /* TouchPointCatcherPositioner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D1A2A3215D06380091AEF3 /* TouchPointCatcherPositioner.swift */; };
 		51E047FD215C8D6400BB0F65 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E047FC215C8D6400BB0F65 /* GameModel.swift */; };
 		51E047FF215C8DCC00BB0F65 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E047FE215C8DCC00BB0F65 /* GameState.swift */; };
 		51E04802215C8F7000BB0F65 /* CatcherNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E04801215C8F7000BB0F65 /* CatcherNode.swift */; };
@@ -63,7 +64,8 @@
 		514C969E215C85D700A79639 /* SampleGridTileSet.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SampleGridTileSet.sks; sourceTree = "<group>"; };
 		51D1A29D215CBE790091AEF3 /* CatcherPositioner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatcherPositioner.swift; sourceTree = "<group>"; };
 		51D1A29F215CC99C0091AEF3 /* PositionGettable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionGettable.swift; sourceTree = "<group>"; };
-		51D1A2A1215CC9F80091AEF3 /* CatcherPositionerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatcherPositionerTests.swift; sourceTree = "<group>"; };
+		51D1A2A1215CC9F80091AEF3 /* TouchPointCatcherPositionerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchPointCatcherPositionerTests.swift; sourceTree = "<group>"; };
+		51D1A2A3215D06380091AEF3 /* TouchPointCatcherPositioner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchPointCatcherPositioner.swift; sourceTree = "<group>"; };
 		51E047FC215C8D6400BB0F65 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		51E047FE215C8DCC00BB0F65 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 		51E04801215C8F7000BB0F65 /* CatcherNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatcherNode.swift; sourceTree = "<group>"; };
@@ -138,7 +140,7 @@
 			children = (
 				514C9685215C835D00A79639 /* CatcherInTheToiletTests.swift */,
 				514C9687215C835D00A79639 /* Info.plist */,
-				51D1A2A1215CC9F80091AEF3 /* CatcherPositionerTests.swift */,
+				51D1A2A1215CC9F80091AEF3 /* TouchPointCatcherPositionerTests.swift */,
 			);
 			path = CatcherInTheToiletTests;
 			sourceTree = "<group>";
@@ -160,6 +162,15 @@
 			path = Util;
 			sourceTree = "<group>";
 		};
+		51D1A2A5215D067B0091AEF3 /* Positioner */ = {
+			isa = PBXGroup;
+			children = (
+				51D1A29D215CBE790091AEF3 /* CatcherPositioner.swift */,
+				51D1A2A3215D06380091AEF3 /* TouchPointCatcherPositioner.swift */,
+			);
+			path = Positioner;
+			sourceTree = "<group>";
+		};
 		51E047FA215C8CDD00BB0F65 /* Game */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,7 +185,7 @@
 			children = (
 				51E047FC215C8D6400BB0F65 /* GameModel.swift */,
 				51E047FE215C8DCC00BB0F65 /* GameState.swift */,
-				51D1A29D215CBE790091AEF3 /* CatcherPositioner.swift */,
+				51D1A2A5215D067B0091AEF3 /* Positioner */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -324,6 +335,7 @@
 				514C9671215C835C00A79639 /* GameScene.swift in Sources */,
 				51E047FD215C8D6400BB0F65 /* GameModel.swift in Sources */,
 				51E04802215C8F7000BB0F65 /* CatcherNode.swift in Sources */,
+				51D1A2A4215D06380091AEF3 /* TouchPointCatcherPositioner.swift in Sources */,
 				51E047FF215C8DCC00BB0F65 /* GameState.swift in Sources */,
 				514C9673215C835C00A79639 /* ViewController.swift in Sources */,
 				514C966B215C835C00A79639 /* AppDelegate.swift in Sources */,
@@ -336,7 +348,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51D1A2A2215CC9F80091AEF3 /* CatcherPositionerTests.swift in Sources */,
+				51D1A2A2215CC9F80091AEF3 /* TouchPointCatcherPositionerTests.swift in Sources */,
 				514C9686215C835D00A79639 /* CatcherInTheToiletTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
