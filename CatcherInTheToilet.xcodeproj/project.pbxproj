@@ -129,6 +129,7 @@
 				514C9672215C835C00A79639 /* ViewController.swift */,
 				514C9674215C835C00A79639 /* Main.storyboard */,
 				51E047FA215C8CDD00BB0F65 /* Game */,
+				51D1A2AC215D40BE0091AEF3 /* Logics */,
 				51E047FB215C8D2400BB0F65 /* Models */,
 				51E04800215C8E4B00BB0F65 /* Views */,
 				51D1A29A215C95890091AEF3 /* Util */,
@@ -177,6 +178,14 @@
 			path = Positioner;
 			sourceTree = "<group>";
 		};
+		51D1A2AC215D40BE0091AEF3 /* Logics */ = {
+			isa = PBXGroup;
+			children = (
+				51D1A2A5215D067B0091AEF3 /* Positioner */,
+			);
+			path = Logics;
+			sourceTree = "<group>";
+		};
 		51E047FA215C8CDD00BB0F65 /* Game */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,7 +200,6 @@
 			children = (
 				51E047FC215C8D6400BB0F65 /* GameModel.swift */,
 				51E047FE215C8DCC00BB0F65 /* GameState.swift */,
-				51D1A2A5215D067B0091AEF3 /* Positioner */,
 				51D1A2A6215D27860091AEF3 /* ShitType.swift */,
 				51D1A2AA215D345D0091AEF3 /* ShitState.swift */,
 			);
