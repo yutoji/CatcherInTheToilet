@@ -1,6 +1,6 @@
 import SpriteKit
 
-class CatcherNode: SKSpriteNode, PositionGettable {
+class CatcherNode: SKSpriteNode, PositionSizeGettable {
 
     private var positioner: CatcherPositioner!
 

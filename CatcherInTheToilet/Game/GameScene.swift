@@ -1,18 +1,32 @@
 import SpriteKit
 import UIKit
 
-class GameScene: SKScene {
+class GameScene: SKScene, SceneShitDistributorDelegate {
     private var catcher: CatcherNode!
     private var catcherPositioner: TouchPointCatcherPositioner!
+    private var assNodes: [AssNode]!
+
+    var timer: GameTimer!
+    private var shitDistributor: SceneShitDistributor!
 
     override func didMove(to view: SKView) {
         _setup()
+
+        let shitPositionGainable = RandomShitStartPositionGainable(asses: assNodes)
+        shitDistributor = NormalSceneShitDistributor(positionGainable: shitPositionGainable, timer: GameTimer(repeats: true))
+        shitDistributor.delegate = self
+        shitDistributor.start()
+    }
+
+    func onDistributed(newShit: ShitNode) {
+        addChild(newShit)
     }
 
     func _setup() {
         // Initialize
         catcher = (childNode(withName: "catcher") as! CatcherNode)
         catcherPositioner = TouchPointCatcherPositioner()
+        _setupAssNodes()
 
         // Connects them
         catcher.setup(positioner: catcherPositioner)
@@ -22,6 +36,14 @@ class GameScene: SKScene {
     override func update(_ currentTime: TimeInterval) {
         catcherPositioner.onFrameUpdated()
         catcher.updatePosition()
+    }
+
+    private func _setupAssNodes() {
+        assNodes = []
+        enumerateChildNodes(withName: "ass") { (eachNode, _) in
+            let ass = eachNode as! AssNode
+            self.assNodes.append(ass)
+        }
     }
 }
 

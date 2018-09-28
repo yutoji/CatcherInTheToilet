@@ -1,6 +1,6 @@
 import SpriteKit
 
-class ShitNode: SKSpriteNode {
+class ShitNode: SKSpriteNode, PositionSizeGettable {
 
     private let DEFAULT_WIDTH: CGFloat = 60.0
     let type: ShitType
