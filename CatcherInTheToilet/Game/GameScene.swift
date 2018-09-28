@@ -2,12 +2,14 @@ import SpriteKit
 import UIKit
 
 class GameScene: SKScene, SceneShitDistributorDelegate, SKPhysicsContactDelegate {
+    let GROUND_HEIGHT: CGFloat = 5
     private var catcher: CatcherNode!
     private var catcherPositioner: TouchPointCatcherPositioner!
     private var assNodes: [AssNode]!
 
     var timer: GameTimer!
     private var shitDistributor: SceneShitDistributor!
+    private let contactHandler = GameScenePhysicalContactHandler()
 
     override func didMove(to view: SKView) {
         _setup()
@@ -46,7 +48,9 @@ class GameScene: SKScene, SceneShitDistributorDelegate, SKPhysicsContactDelegate
 
     private func _setupPhysicsWorld() {
         physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
+        physicsBody?.contactTestBitMask = ContactCategory.UnkoHittable
         physicsWorld.contactDelegate = self
+        catcher.physicsBody?.contactTestBitMask = ContactCategory.UnkoHittable
     }
 
     override func update(_ currentTime: TimeInterval) {
@@ -60,12 +64,37 @@ class GameScene: SKScene, SceneShitDistributorDelegate, SKPhysicsContactDelegate
 
     func onDistributed(newShit: ShitNode) {
         assert(newShit.state == .standby)
+        newShit.physicsBody?.contactTestBitMask = ContactCategory.UnkoHittable
+        newShit.zPosition = 100
         newShit.start()
         addChild(newShit)
     }
 
-    func didBegin(_ contact: SKPhysicsContact) {
+    func isHitGround(shit: ShitNode) -> Bool {
+        if shit.state != .falling { return false }
+        let shitBottomY = shit.position.y - shit.size.height / 2
+        let groundTopY = -self.frame.height / 2 + GROUND_HEIGHT
+        let isShitInGround = shitBottomY < groundTopY
+        return isShitInGround
+    }
 
+    func didBegin(_ contact: SKPhysicsContact) {
+        contactHandler.contact = contact
+        let contactType = contactHandler.handle()
+        switch contactType {
+        case let .shitCatched(shitNode):
+            shitNode.onCatched()
+        case let .shitHitsGround(shitNode):
+            shitNode.onHitsGround()
+        case let .shitHitsGroundShit(shitNode):
+            shitNode.onHitsGround()
+        case .none:
+            break
+        }
+    }
+
+    struct ContactCategory {
+        static let UnkoHittable: UInt32 = 0x1 << 1
     }
 }
 

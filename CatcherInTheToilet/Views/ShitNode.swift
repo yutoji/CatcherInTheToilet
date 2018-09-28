@@ -16,6 +16,7 @@ class ShitNode: SKSpriteNode, PositionSizeGettable {
             height: texture.size().height * (DEFAULT_WIDTH / texture.size().width)
         )
         super.init(texture: texture, color: .clear, size: size)
+        self.name = "shit"
         _setupPhysics()
     }
 
@@ -32,6 +33,18 @@ class ShitNode: SKSpriteNode, PositionSizeGettable {
         assert(!_isRunning)
         _isRunning = true
         _startAction()
+    }
+
+    func onCatched() {
+        assert(_isRunning && state == .falling)
+        state = .dead
+        removeFromParent()
+    }
+
+    func onHitsGround() {
+        assert(_isRunning && state == .falling)
+        state = .dead
+        physicsBody?.isDynamic = false
     }
 
     private func _startAction() {
