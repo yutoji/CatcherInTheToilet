@@ -35,7 +35,6 @@ class GameScene: SKScene, SceneShitDistributorDelegate {
 
     override func update(_ currentTime: TimeInterval) {
         catcherPositioner.onFrameUpdated()
-        catcher.updatePosition()
     }
 
     private func _setupAssNodes() {

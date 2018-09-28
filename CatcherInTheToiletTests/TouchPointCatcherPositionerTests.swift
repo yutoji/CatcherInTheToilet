@@ -7,6 +7,7 @@ class TouchPointCatcherPositionerTests: XCTestCase {
     private let SAMPLE_POSITION = CGPoint(x: 8, y: 9)
     fileprivate var catcher: _Catcher!
     private var positioner: TouchPointCatcherPositioner!
+    fileprivate var delegate: _Delegate!
 
     override func setUp() {
         reset()
@@ -16,7 +17,9 @@ class TouchPointCatcherPositionerTests: XCTestCase {
         catcher = _Catcher()
         catcher.position = DEFAULT_POSITION
         positioner = TouchPointCatcherPositioner()
+        delegate = _Delegate()
         positioner.setup(catcher: catcher)
+        positioner.delegate = delegate
     }
 
     func testWithoutTouch() {
@@ -38,8 +41,27 @@ class TouchPointCatcherPositionerTests: XCTestCase {
         XCTAssertEqual(positioner.nextPosition, CGPoint(x: 8, y: 111))
     }
 
+    func testDelegate() {
+        positioner.onTouch(touch: SAMPLE_POSITION)
+        positioner.onTouchEnd()
+        XCTAssertEqual(delegate.updatedCount, 0)
+
+        positioner.onFrameUpdated()
+        XCTAssertEqual(delegate.updatedCount, 1)
+
+        positioner.onFrameUpdated()
+        XCTAssertEqual(delegate.updatedCount, 2)
+    }
+
 }
 
 fileprivate class _Catcher: PositionGettable {
     var position: CGPoint = .zero
+}
+
+fileprivate class _Delegate: CatcherPositionerDelegate {
+    var updatedCount: Int = 0
+    func onCatcherPositionUpdated() {
+        updatedCount += 1
+    }
 }

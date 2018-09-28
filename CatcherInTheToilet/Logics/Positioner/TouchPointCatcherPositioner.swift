@@ -3,6 +3,7 @@ import SpriteKit
 
 class TouchPointCatcherPositioner: CatcherPositioner {
 
+    weak var delegate: CatcherPositionerDelegate?
     var nextPosition: CGPoint = .zero
     private weak var catcher: PositionGettable!
 
@@ -19,6 +20,6 @@ class TouchPointCatcherPositioner: CatcherPositioner {
     }
 
     func onFrameUpdated() {
-
+        delegate?.onCatcherPositionUpdated()
     }
 }
