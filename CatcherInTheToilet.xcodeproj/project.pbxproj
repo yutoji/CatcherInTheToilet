@@ -18,6 +18,7 @@
 		514C9686215C835D00A79639 /* CatcherInTheToiletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514C9685215C835D00A79639 /* CatcherInTheToiletTests.swift */; };
 		514C9691215C835D00A79639 /* CatcherInTheToiletUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514C9690215C835D00A79639 /* CatcherInTheToiletUITests.swift */; };
 		514C969F215C85D700A79639 /* SampleGridTileSet.sks in Resources */ = {isa = PBXBuildFile; fileRef = 514C969E215C85D700A79639 /* SampleGridTileSet.sks */; };
+		516067DC215E1D09008F34EB /* ShitActionMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516067DB215E1D09008F34EB /* ShitActionMaker.swift */; };
 		51D1A29E215CBE790091AEF3 /* CatcherPositioner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D1A29D215CBE790091AEF3 /* CatcherPositioner.swift */; };
 		51D1A2A0215CC99C0091AEF3 /* PositionGettable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D1A29F215CC99C0091AEF3 /* PositionGettable.swift */; };
 		51D1A2A2215CC9F80091AEF3 /* TouchPointCatcherPositionerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D1A2A1215CC9F80091AEF3 /* TouchPointCatcherPositionerTests.swift */; };
@@ -78,6 +79,7 @@
 		514C9690215C835D00A79639 /* CatcherInTheToiletUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatcherInTheToiletUITests.swift; sourceTree = "<group>"; };
 		514C9692215C835D00A79639 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		514C969E215C85D700A79639 /* SampleGridTileSet.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SampleGridTileSet.sks; sourceTree = "<group>"; };
+		516067DB215E1D09008F34EB /* ShitActionMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShitActionMaker.swift; sourceTree = "<group>"; };
 		51D1A29D215CBE790091AEF3 /* CatcherPositioner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatcherPositioner.swift; sourceTree = "<group>"; };
 		51D1A29F215CC99C0091AEF3 /* PositionGettable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionGettable.swift; sourceTree = "<group>"; };
 		51D1A2A1215CC9F80091AEF3 /* TouchPointCatcherPositionerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchPointCatcherPositionerTests.swift; sourceTree = "<group>"; };
@@ -258,6 +260,7 @@
 				51E04801215C8F7000BB0F65 /* CatcherNode.swift */,
 				51D1A2A8215D28AC0091AEF3 /* ShitNode.swift */,
 				51D1A2C7215DDCB00091AEF3 /* AssNode.swift */,
+				516067DB215E1D09008F34EB /* ShitActionMaker.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -400,6 +403,7 @@
 				51E047FD215C8D6400BB0F65 /* GameModel.swift in Sources */,
 				51E04802215C8F7000BB0F65 /* CatcherNode.swift in Sources */,
 				51D1A2B7215DB3310091AEF3 /* EvenRandomLoopIterator.swift in Sources */,
+				516067DC215E1D09008F34EB /* ShitActionMaker.swift in Sources */,
 				51D1A2A4215D06380091AEF3 /* TouchPointCatcherPositioner.swift in Sources */,
 				51D1A2C8215DDCB00091AEF3 /* AssNode.swift in Sources */,
 				51E047FF215C8DCC00BB0F65 /* GameState.swift in Sources */,

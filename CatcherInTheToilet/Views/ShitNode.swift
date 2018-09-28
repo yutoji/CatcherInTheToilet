@@ -5,6 +5,7 @@ class ShitNode: SKSpriteNode, PositionSizeGettable {
     private let DEFAULT_WIDTH: CGFloat = 60.0
     let type: ShitType
     var state: ShitState
+    private var _isRunning: Bool = false
 
     init(type: ShitType) {
         self.type = type
@@ -15,10 +16,51 @@ class ShitNode: SKSpriteNode, PositionSizeGettable {
             height: texture.size().height * (DEFAULT_WIDTH / texture.size().width)
         )
         super.init(texture: texture, color: .clear, size: size)
+        _setupPhysics()
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    private func _setupPhysics() {
+        physicsBody = SKPhysicsBody(texture: self.texture!, size: self.size)
+        physicsBody?.isDynamic = false
+    }
+
+    func start() {
+        assert(!_isRunning)
+        _isRunning = true
+        _startAction()
+    }
+
+    private func _startAction() {
+        let action = ShitActionMaker(type: type).make(state: state) { [weak self] in
+            self?.removeAllActions()
+            self?._gotoNextState()
+        }
+        run(action)
+    }
+
+    private func _gotoNextState() {
+        guard let nextState = _nextState(of: state) else {
+            return
+        }
+
+        if nextState == .falling {
+            state = .falling
+
+            physicsBody?.isDynamic = true
+            self._startAction()
+            return
+        }
+    }
+
+    private func _nextState(of theState: ShitState) -> ShitState? {
+        if theState == .standby {
+            return .falling
+        }
+        return nil
     }
 
 }

@@ -1,7 +1,7 @@
 import SpriteKit
 import UIKit
 
-class GameScene: SKScene, SceneShitDistributorDelegate {
+class GameScene: SKScene, SceneShitDistributorDelegate, SKPhysicsContactDelegate {
     private var catcher: CatcherNode!
     private var catcherPositioner: TouchPointCatcherPositioner!
     private var assNodes: [AssNode]!
@@ -12,14 +12,7 @@ class GameScene: SKScene, SceneShitDistributorDelegate {
     override func didMove(to view: SKView) {
         _setup()
 
-        let shitPositionGainable = RandomShitStartPositionGainable(asses: assNodes)
-        shitDistributor = NormalSceneShitDistributor(positionGainable: shitPositionGainable, timer: GameTimer(repeats: true))
-        shitDistributor.delegate = self
-        shitDistributor.start()
-    }
-
-    func onDistributed(newShit: ShitNode) {
-        addChild(newShit)
+        _startGame()
     }
 
     func _setup() {
@@ -27,14 +20,14 @@ class GameScene: SKScene, SceneShitDistributorDelegate {
         catcher = (childNode(withName: "catcher") as! CatcherNode)
         catcherPositioner = TouchPointCatcherPositioner()
         _setupAssNodes()
+        _setupShitDistributor()
 
         // Connects them
         catcher.setup(positioner: catcherPositioner)
         catcherPositioner.setup(catcher: catcher)
-    }
 
-    override func update(_ currentTime: TimeInterval) {
-        catcherPositioner.onFrameUpdated()
+        // Others
+        _setupPhysicsWorld()
     }
 
     private func _setupAssNodes() {
@@ -43,6 +36,36 @@ class GameScene: SKScene, SceneShitDistributorDelegate {
             let ass = eachNode as! AssNode
             self.assNodes.append(ass)
         }
+    }
+
+    private func _setupShitDistributor() {
+        let shitPositionGainable = RandomShitStartPositionGainable(asses: assNodes)
+        shitDistributor = NormalSceneShitDistributor(positionGainable: shitPositionGainable, timer: GameTimer(repeats: true))
+        shitDistributor.delegate = self
+    }
+
+    private func _setupPhysicsWorld() {
+        physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
+        physicsWorld.contactDelegate = self
+    }
+
+    override func update(_ currentTime: TimeInterval) {
+        catcherPositioner.onFrameUpdated()
+    }
+
+    private func _startGame() {
+        shitDistributor.start()
+        physicsWorld.gravity = CGVector(dx: 0.0, dy: -0.9)
+    }
+
+    func onDistributed(newShit: ShitNode) {
+        assert(newShit.state == .standby)
+        newShit.start()
+        addChild(newShit)
+    }
+
+    func didBegin(_ contact: SKPhysicsContact) {
+
     }
 }
 
