@@ -3,6 +3,7 @@ import XCTest
 
 class GameTimerTests: XCTestCase {
 
+    let EXPECTATION_TIMEOUT: TimeInterval = 5 // take much seconds
     let INTERVAL: TimeInterval = 0.01
     private var gameTimer: GameTimer!
 
@@ -31,7 +32,7 @@ class GameTimerTests: XCTestCase {
         XCTAssertFalse(gameTimer.isRunning)
         gameTimer.start()
         XCTAssertTrue(gameTimer.isRunning)
-        self.waitForExpectations(timeout: 0.2, handler: nil)
+        self.waitForExpectations(timeout: EXPECTATION_TIMEOUT, handler: nil)
     }
 
     func testNonRepeats() {
@@ -48,7 +49,7 @@ class GameTimerTests: XCTestCase {
         }
         XCTAssertFalse(gameTimer.isRunning)
         gameTimer.start()
-        self.waitForExpectations(timeout: 0.1, handler: nil)
+        self.waitForExpectations(timeout: EXPECTATION_TIMEOUT, handler: nil)
     }
 
     func testDeinit() {
@@ -63,6 +64,6 @@ class GameTimerTests: XCTestCase {
             XCTAssertEqual(calledCount, 0)
             waitExpectation.fulfill()
         }
-        self.waitForExpectations(timeout: 0.1, handler: nil)
+        self.waitForExpectations(timeout: EXPECTATION_TIMEOUT, handler: nil)
     }
 }
