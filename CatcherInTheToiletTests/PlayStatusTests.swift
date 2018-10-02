@@ -16,22 +16,22 @@ class PlayStatusTests: XCTestCase {
         XCTAssertEqual(status.MIN_SCORE, 0)
 
         status.onShitGot(type: ShitType.normal)
-        status.onShitGot(type: ShitType.normal)
+        status.onShitLost(type: ShitType.normal)
         status.onShitLost(type: ShitType.normal)
         status.onShitLost(type: ShitType.normal)
         status.onShitLost(type: ShitType.normal) // expect event fired
         status.onShitGot(type: ShitType.normal)
         status.onShitLost(type: ShitType.normal)
         status.onShitGot(type: ShitType.normal)
-        XCTAssertEqual(delegate.updatedScores, [1, 2, 1, 0, 0, 1, 0, 1])
-        XCTAssertEqual(delegate.updatedScoreDiffs, [1, 1, -1, -1, 0, 1, -1, 1])
-        XCTAssertEqual(status.score, 1)
+        XCTAssertEqual(delegate.updatedScores, [3, 2, 1, 0, 0, 3, 2, 5])
+        XCTAssertEqual(delegate.updatedScoreDiffs, [3, -1, -1, -1, 0, 3, -1, 3])
+        XCTAssertEqual(status.score, 5)
     }
 
     func testScoreChangeForHardShit() {
         status.onShitGot(type: ShitType.hard)
         status.onShitLost(type: ShitType.hard)
-        XCTAssertEqual(delegate.updatedScores, [2, 1])
+        XCTAssertEqual(delegate.updatedScores, [5, 4])
     }
 
     func testShitGotLostPlayEvent() {
