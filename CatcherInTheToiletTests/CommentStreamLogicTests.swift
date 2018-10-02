@@ -73,7 +73,7 @@ class CommentStreamLogicTests: XCTestCase {
 
     func testSameTimeStream() {
         succeeding = _makeComment(width: 200, timeDiffRatio: 0)
-        print(toDouble(double: 0))
+
         XCTAssertTrue(_willColid())
 
         succeeding = _makeComment(width: 2, timeDiffRatio: 0)
