@@ -6,7 +6,7 @@ import Foundation
 class NormalSceneShitDistributor: SceneShitDistributor {
     var delegate: SceneShitDistributorDelegate?
 
-    let INTERVAL: TimeInterval = 3
+    let INTERVAL: TimeInterval = 2
     private let positionGainable: ShitStartPositionGainable
     private let timer: GameTimerProtocol
 

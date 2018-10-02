@@ -7,8 +7,9 @@ class GameScene: SKScene, SceneShitDistributorDelegate, SKPhysicsContactDelegate
     private var catcherPositioner: TouchPointCatcherPositioner!
     private var assNodes: [AssNode]!
     private var playStatus: PlayStatus!
-//    private var scorePane: ScorePane!
     lazy private var scorePane: ScorePane = childNode(withName: "scorePane") as! ScorePane
+    private var commentPaneLayer: SKNode!
+    private var commentPane: CommentPane!
 
     var timer: GameTimer!
     private var shitDistributor: SceneShitDistributor!
@@ -26,10 +27,12 @@ class GameScene: SKScene, SceneShitDistributorDelegate, SKPhysicsContactDelegate
         catcherPositioner = TouchPointCatcherPositioner()
         _setupAssNodes()
         _setupShitDistributor()
+        commentPaneLayer = childNode(withName: "commentPaneLayer")!
 
         // Connects them
         catcher.setup(positioner: catcherPositioner)
         catcherPositioner.setup(catcher: catcher)
+        _prepareCommentPane()
 
         // Others
         _setupPhysicsWorld()
@@ -49,6 +52,11 @@ class GameScene: SKScene, SceneShitDistributorDelegate, SKPhysicsContactDelegate
         shitDistributor.delegate = self
     }
 
+    private func _prepareCommentPane() {
+        commentPane = CommentPane(color: .clear, size: size)
+        commentPaneLayer.addChild(commentPane)
+    }
+
     private func _setupPhysicsWorld() {
         physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
         physicsBody?.contactTestBitMask = ContactCategory.UnkoHittable
@@ -65,6 +73,7 @@ class GameScene: SKScene, SceneShitDistributorDelegate, SKPhysicsContactDelegate
         physicsWorld.gravity = CGVector(dx: 0.0, dy: -0.9)
         playStatus = PlayStatus()
         scorePane.playStatus = playStatus
+        commentPane.prepare(playStatus: playStatus)
     }
 
     func onDistributed(newShit: ShitNode) {

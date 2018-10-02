@@ -23,7 +23,7 @@ class GameTimerTests: XCTestCase {
             }
         }
         let repeatExpectation = self.expectation(description: "finish")
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.1 ) {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.2 ) {
             XCTAssertEqual(completionCount, repeatCount)
             XCTAssertFalse(self.gameTimer.isRunning)
             repeatExpectation.fulfill()

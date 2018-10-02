@@ -22,12 +22,21 @@ extension ShitType {
 
     func scoreGet() -> Int {
         switch self {
-        case .normal: return 1
-        case .hard:   return 2
+        case .normal: return 3
+        case .hard:   return 5
         }
     }
 
     func scoreLose() -> Int {
         return 1
+    }
+
+    var theName: String {
+        switch self {
+        case .normal:
+            return "Mr. Shit"
+        case .hard:
+            return "Hard Shit"
+        }
     }
 }
