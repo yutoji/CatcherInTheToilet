@@ -6,6 +6,7 @@ class GameScene: SKScene, SceneShitDistributorDelegate, SKPhysicsContactDelegate
     private var catcher: CatcherNode!
     private var catcherPositioner: TouchPointCatcherPositioner!
     private var assNodes: [AssNode]!
+    private var playStatus: PlayStatus!
 
     var timer: GameTimer!
     private var shitDistributor: SceneShitDistributor!
@@ -60,6 +61,7 @@ class GameScene: SKScene, SceneShitDistributorDelegate, SKPhysicsContactDelegate
     private func _startGame() {
         shitDistributor.start()
         physicsWorld.gravity = CGVector(dx: 0.0, dy: -0.9)
+        playStatus = PlayStatus()
     }
 
     func onDistributed(newShit: ShitNode) {
@@ -84,8 +86,10 @@ class GameScene: SKScene, SceneShitDistributorDelegate, SKPhysicsContactDelegate
         switch contactType {
         case let .shitCatched(shitNode):
             shitNode.onCatched()
+            playStatus.onShitGot(type: shitNode.type)
         case let .shitHitsGround(shitNode):
             shitNode.onHitsGround()
+            playStatus.onShitLost(type: shitNode.type)
         case let .shitHitsGroundShit(shitNode):
             shitNode.onHitsGround()
         case .none:

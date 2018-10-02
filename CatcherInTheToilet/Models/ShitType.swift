@@ -20,4 +20,14 @@ extension ShitType {
         }
     }
 
+    func scoreGet() -> Int {
+        switch self {
+        case .normal: return 1
+        case .hard:   return 2
+        }
+    }
+
+    func scoreLose() -> Int {
+        return 1
+    }
 }
