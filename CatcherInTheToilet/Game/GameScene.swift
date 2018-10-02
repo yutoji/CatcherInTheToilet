@@ -7,6 +7,8 @@ class GameScene: SKScene, SceneShitDistributorDelegate, SKPhysicsContactDelegate
     private var catcherPositioner: TouchPointCatcherPositioner!
     private var assNodes: [AssNode]!
     private var playStatus: PlayStatus!
+//    private var scorePane: ScorePane!
+    lazy private var scorePane: ScorePane = childNode(withName: "scorePane") as! ScorePane
 
     var timer: GameTimer!
     private var shitDistributor: SceneShitDistributor!
@@ -62,6 +64,7 @@ class GameScene: SKScene, SceneShitDistributorDelegate, SKPhysicsContactDelegate
         shitDistributor.start()
         physicsWorld.gravity = CGVector(dx: 0.0, dy: -0.9)
         playStatus = PlayStatus()
+        scorePane.playStatus = playStatus
     }
 
     func onDistributed(newShit: ShitNode) {
