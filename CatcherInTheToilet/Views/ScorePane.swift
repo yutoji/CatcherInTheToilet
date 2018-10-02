@@ -18,8 +18,8 @@ class ScorePane: SKNode {
         scoreLabel.text = String(describing: playStatus.score)
         scoreLabel.removeAllActions()
         scoreLabel.alpha = 1.0
-        scoreLabel.color = diffScore > 0 ? .white : .red
-        scoreLabel.setScale(2.0)
+        scoreLabel.color = diffScore > 0 ? _getSuccessColor() : .red
+        scoreLabel.setScale(diffScore > 0 ? 2.0 : 1.0)
         let actions = [
             SKAction.sequence([
                 SKAction.wait(forDuration: 1.0),
@@ -30,6 +30,10 @@ class ScorePane: SKNode {
         ]
         let actionAll = SKAction.group(actions)
         scoreLabel.run(actionAll)
+    }
+
+    private func _getSuccessColor() -> UIColor {
+        return .white
     }
 
     override func move(toParent parent: SKNode) {
