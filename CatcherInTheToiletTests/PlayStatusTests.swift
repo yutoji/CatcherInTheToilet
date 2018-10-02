@@ -19,13 +19,12 @@ class PlayStatusTests: XCTestCase {
         status.onShitGot(type: ShitType.normal)
         status.onShitLost(type: ShitType.normal)
         status.onShitLost(type: ShitType.normal)
-        for _ in 0...10 {
-            status.onShitLost(type: ShitType.normal) // expect no event fired
-        }
+        status.onShitLost(type: ShitType.normal) // expect event fired
         status.onShitGot(type: ShitType.normal)
         status.onShitLost(type: ShitType.normal)
         status.onShitGot(type: ShitType.normal)
-        XCTAssertEqual(delegate.updatedScores, [1, 2, 1, 0, 1, 0, 1])
+        XCTAssertEqual(delegate.updatedScores, [1, 2, 1, 0, 0, 1, 0, 1])
+        XCTAssertEqual(delegate.updatedScoreDiffs, [1, 1, -1, -1, 0, 1, -1, 1])
         XCTAssertEqual(status.score, 1)
     }
 
@@ -54,14 +53,16 @@ class PlayStatusTests: XCTestCase {
     private class _Delegate: PlayStatusDelegate {
         var occuredEvents: [PlayEvent] = []
         var updatedScores: [Int] = []
+        var updatedScoreDiffs: [Int] = []
         let status: PlayStatusProtocol
 
         init(status: PlayStatusProtocol) {
             self.status = status
         }
 
-        func onScoreUpdated() {
+        func onScoreUpdated(diff: Int) {
             updatedScores.append(status.score)
+            updatedScoreDiffs.append(diff)
         }
 
         func onEventOccured(event: PlayEvent) {

@@ -6,7 +6,7 @@ protocol PlayStatusProtocol {
 }
 
 protocol PlayStatusDelegate {
-    func onScoreUpdated()
+    func onScoreUpdated(diff: Int)
     func onEventOccured(event: PlayEvent)
 }
 
@@ -25,25 +25,23 @@ class PlayStatus: PlayStatusProtocol {
 
     func onShitGot(type: ShitType) {
         let scoreGet = type.scoreGet()
-        _updateScore(diff: scoreGet)
+        _updateScore(expectedDiff: scoreGet)
         _fireEvent(event: PlayEvent.gotShit(type) )
     }
 
     func onShitLost(type: ShitType) {
         let scoreLoss = type.scoreLose()
-        _updateScore(diff: -scoreLoss)
+        _updateScore(expectedDiff: -scoreLoss)
         _fireEvent(event: PlayEvent.lostShit(type) )
     }
 
-    private func _updateScore(diff: Int) {
-        let newScoreRaw = _score + diff
+    private func _updateScore(expectedDiff: Int) {
+        let newScoreRaw = _score + expectedDiff
         let newScore = max(newScoreRaw, MIN_SCORE)
-        if newScore == _score {
-            return
-        }
+        let diff = newScore - _score
         _score = newScore
         delegates.forEach() { delegate in
-            delegate.onScoreUpdated()
+            delegate.onScoreUpdated(diff: diff)
         }
     }
 
