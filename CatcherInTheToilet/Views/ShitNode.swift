@@ -6,6 +6,7 @@ class ShitNode: SKSpriteNode, PositionSizeGettable {
     let type: ShitType
     var state: ShitState
     private var _isRunning: Bool = false
+    private let _actionMaker: ShitActionMaker
 
     init(type: ShitType) {
         self.type = type
@@ -15,6 +16,7 @@ class ShitNode: SKSpriteNode, PositionSizeGettable {
             width: DEFAULT_WIDTH,
             height: texture.size().height * (DEFAULT_WIDTH / texture.size().width)
         )
+        _actionMaker = ShitActionMaker(type: type)
         super.init(texture: texture, color: .clear, size: size)
         self.name = "shit"
         _setupPhysics()
@@ -38,18 +40,24 @@ class ShitNode: SKSpriteNode, PositionSizeGettable {
     func onCatched() {
         assert(_isRunning && state == .falling)
         state = .dead
-        removeFromParent()
+        _startAction() { [weak self] in
+            self?.removeFromParent()
+        }
     }
 
     func onHitsGround() {
         assert(_isRunning && state == .falling)
         state = .dead
         physicsBody?.isDynamic = false
+        _startAction() { [weak self] in
+            self?.removeFromParent()
+        }
     }
 
-    private func _startAction() {
-        let action = ShitActionMaker(type: type).make(state: state) { [weak self] in
+    private func _startAction(completion: (() -> Void)? = nil) {
+        let action = _actionMaker.make(state: state) { [weak self] in
             self?.removeAllActions()
+            completion?()
             self?._gotoNextState()
         }
         run(action)

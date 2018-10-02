@@ -8,21 +8,23 @@ class GameScenePhysicalContactHandler {
         defer {
             contact = nil
         }
-        if let shit = _node(withName: "shit") as? ShitNode,
-            let catcher = _node(withName: "catcher") as? CatcherNode {
+        guard let shit = _node(withName: "shit") as? ShitNode else {
+            return .none
+        }
+
+        if let catcher = _node(withName: "catcher") as? CatcherNode {
             let isShitCatchedNow = shit.state == .falling && catcher.isCatchable(shit: shit)
             if isShitCatchedNow {
                 return ContactType.shitCatched(shit)
             }
         }
-        if let shit = _node(withName: "shit") as? ShitNode,
-            let gameScene = _node(withName: "gameScene") as? GameScene {
+        if let gameScene = _node(withName: "gameScene") as? GameScene {
             if gameScene.isHitGround(shit: shit) {
                 return ContactType.shitHitsGround(shit)
             }
         }
-        if let shit = _node(withName: "shit") as? ShitNode,
-            let shit2 = _node(withName: "shit", orderReverse: true) as? ShitNode {
+        
+        if let shit2 = _node(withName: "shit", orderReverse: true) as? ShitNode {
             let shits = [shit, shit2]
             if shits.contains(where: {$0.state == .dead}) &&
                 shits.contains(where: {$0.state == .falling}) {
