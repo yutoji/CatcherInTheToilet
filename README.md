@@ -1,5 +1,7 @@
 # CatcherInTheToilet
 
+![catcherinthetoilet_ss](https://user-images.githubusercontent.com/43261614/46394829-4929e580-c725-11e8-9343-af25e413daf8.png) ![catcherinthetoiletdemo_short](https://user-images.githubusercontent.com/43261614/46394752-0536e080-c725-11e8-922e-e9d67cf3f46c.gif)
+
 ## 概要
 iOS アプリ開発の練習に、うんこをキャッチするゲームを３日で作る。
 
