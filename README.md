@@ -1,4 +1,4 @@
-# CatcherInTheToilet
+# Catcher in the Toilet
 
 ![catcherinthetoilet_ss](https://user-images.githubusercontent.com/43261614/46394829-4929e580-c725-11e8-9343-af25e413daf8.png) ![catcherinthetoiletdemo_short](https://user-images.githubusercontent.com/43261614/46394752-0536e080-c725-11e8-922e-e9d67cf3f46c.gif)
 
@@ -57,7 +57,7 @@ iOS アプリ開発の練習に、うんこをキャッチするゲームを３�
 
 ## 総括
 - 3日で作るには少し無理があった
-- 優先順位のアジールな変更は、比較的にできた
+- 優先順位の agile な変更は、比較的にできた
 - SKNode 系のカスタムクラスにロジックを書くとクラスが肥大化し、テスタビリティがなくなるため、できるだけロジックを別クラスに分離するのがよいということを学んだ
 - SKNode 系統のカスタムクラスになんでも書いてしまうと、 Rails で model にDB操作とビジネスロジックが混合状態になっているのを見たときのような気持ちになってしまう
 - 理想的にはそうだが、実際には分離できていない部分が多々あるため、理想状態に近づけるためには、さらなるリファクタリングが必要である
