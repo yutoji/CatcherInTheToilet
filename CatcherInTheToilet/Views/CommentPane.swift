@@ -5,7 +5,7 @@ class CommentPane: SKSpriteNode {
     var playStatus: PlayStatusProtocol!
     var comments: [CommentPaneComment] = []
     let TOP_MARGIN: CGFloat = 120
-    let COMMENT_STREAM_INTERVAL: TimeInterval = 4
+    let COMMENT_STREAM_INTERVAL: TimeInterval = 5
 
     func prepare(playStatus: PlayStatusProtocol) {
         self.playStatus = playStatus
@@ -30,7 +30,7 @@ class CommentPane: SKSpriteNode {
             if !isCollideThisLine {
                 break
             }
-            y -= comment.DEFAULT_FONT_SIZE + comment.MARGIN
+            y -= comment.DEFAULT_FONT_SIZE + comment.BOTTOM_MARGIN
         }
         comment.position.y = y
 
@@ -45,10 +45,18 @@ class CommentPane: SKSpriteNode {
             SKAction.moveTo(x: -scene!.size.width/2.0 - comment.label.frame.width,
                             duration: COMMENT_STREAM_INTERVAL),
             SKAction.run {
-                comment.removeFromParent()
+                self._discardComment(comment: comment)
             }
         ]
         comment.run(SKAction.sequence(actions))
+    }
+
+    private func _discardComment(comment: CommentPaneComment) {
+        comment.removeAllActions()
+        comment.removeFromParent()
+        if let index = comments.firstIndex(of: comment) {
+            comments.remove(at: index)
+        }
     }
 
 }
@@ -83,7 +91,8 @@ extension CommentPane: PlayStatusDelegate {
 
 class CommentPaneComment: SKSpriteNode {
     let DEFAULT_FONT_SIZE: CGFloat = 50
-    let MARGIN: CGFloat = 16
+    let BOTTOM_MARGIN: CGFloat = 24
+    let RIGHT_MARGIN: CGFloat = 12
     var startedAt: Date!
     var label: SKLabelNode!
 
@@ -107,7 +116,10 @@ class CommentPaneComment: SKSpriteNode {
     }
 
     var logicItem: CommentStreamLogicItem {
-        return CommentStreamLogicItemImpl(width: label.frame.width, startedAt: startedAt)
+        return CommentStreamLogicItemImpl(
+            width: label.frame.width + RIGHT_MARGIN,
+            startedAt: startedAt
+        )
     }
 }
 
