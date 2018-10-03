@@ -45,6 +45,7 @@ iOS アプリ開発の練習に、うんこをキャッチするゲームを３�
 - うんこキャッチ時のエフェクト
 - うんこ消滅時のエフェクト
 - ライフクラスの定義と表示
+- BEST SCORE の記録と表示
 - ゲーム開始/リスタートのシーンの実装
 - タップではなく tilt でキャッチャーを動かすクラスの実装
 - レベル概念の導入
@@ -52,16 +53,14 @@ iOS アプリ開発の練習に、うんこをキャッチするゲームを３�
 - Lv.3 で風が吹いてくる
 - 各レベルの実装
 
-## Memo
-- SKSpriteNode の custom class を作る際のイニシャライザについて 
-- ``init(texture: SKTexture!, color: UIColor!, size: CGSize)`` is the only designated initializer in the SKSpriteNode class, the rest are all convenience initializers, so you can't call super on them.
-- Answer: Should call the designated initializer above in your custom init(), with overriding the init?(coder) which is required for NSCoder protocol.
-- See also ``ShitNode.swift``
-- 例: 
-```swift
-init() {
-let texture = SKTexture(imageNamed: "shit")
-super.init(texture: texture, color: UIColor.clearColor(), size: texture.size())
-}
-```
-- escaping closure の相互参照について調べる
+## 総括
+- 3日で作るには少し無理があった
+- 優先順位のアジールな変更は、比較的にできた
+- SKNode 系のカスタムクラスにロジックを書くとクラスが肥大化し、テスタビリティがなくなるため、できるだけロジックを別クラスに分離するのがよいということを学んだ
+- SKNode 系統のカスタムクラスになんでも書いてしまうと、 Rails で model にDB操作とビジネスロジックが混合状態になっているのを見たときのような気持ちになってしまう
+- 理想的にはそうだが、実際には分離できていない部分が多々あるため、理想状態に近づけるためには、さらなるリファクタリングが必要である
+- SKNode 系のオブジェクトをそのまま別クラスに参照渡ししている箇所が多々残っているが、すべてプロトコルに変更すべきである
+- オブジェクトを大量生成する箇所ではオブジェクトプールに変更する必要がある
+- また、メモリ溢れ出しを防ぐためのテストも必要である
+- うんことコメントを生成する処理に関しては、さらなる分離と、ゴミが残らないか検証するテストが必須である。配列からの削除を忘れると悲惨なことになる。
+- 開発しながら、テレビドラマ『逃げるは恥だが役に立つ』を見てたら、面白すぎてなかなか開発に集中できなくなった
